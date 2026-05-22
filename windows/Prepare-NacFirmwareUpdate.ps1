@@ -183,7 +183,7 @@ function Format-UsbDrive {
 
     Write-Info "Cleaning disk $($Disk.Number)..."
     # Clear the disk and create MBR + single FAT32 partition
-    Clear-Disk -Number $Disk.Number -RemoveData -RemoveOEM -Confirm:$false # -ErrorAction SilentlyContinue
+    Clear-Disk -Number $Disk.Number -RemoveData -RemoveOEM -Confirm:$false -ErrorAction SilentlyContinue
 
     Start-Sleep -Seconds 2
     Update-StorageProviderCache
